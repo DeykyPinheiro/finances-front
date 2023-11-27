@@ -1,0 +1,29 @@
+.container-fluid {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-primary-1)
+}
+
+.card-login {
+    background-color: var(--color-primary-2);
+    margin: auto;
+    padding: 20px;
+
+    min-width: 300px;
+    max-width: 700px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons button {
+    display: inline-block;
+    margin: auto;
+    padding: 10px;
+    margin: 10px;
+}

@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+
+    --color-primary-0: #C6CAC8;
+    --color-primary-1: #B4D9C7;
+    --color-primary-2: #14BF6D;
+    --color-primary-3: #00B15C;
+
+
+    font-family: Arial, Helvetica, sans-serif;
+    // background: linear-gradient(to right, var(--color-primary-1), white);
+}
