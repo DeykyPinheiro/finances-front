@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserComponent } from './user.component';
+import { ReactiveFormsModule } from '@angular/forms'; // importar pros formularios funcionarem
 
 
 
@@ -9,7 +10,8 @@ import { UserComponent } from './user.component';
     UserComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   exports: [
     UserComponent

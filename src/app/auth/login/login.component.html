@@ -14,10 +14,12 @@
                         Email é obrigatório.
                     </div>
                     <div *ngIf="form.get('email')?.errors?.['minlength']">
-                        O email deve ter pelo menos 7 caracteres.
+                        O email deve ter pelo menos {{ form.get('email')?.errors?.['minlength'].requiredLength }}
+                        caracteres.
                     </div>
                     <div *ngIf="form.get('email')?.errors?.['maxlength']">
-                        O email não pode ter mais de 300 caracteres.
+                        O email não pode ter mais de {{ form.get('email')?.errors?.['maxlength'].requiredLength }}
+                        caracteres.
                     </div>
                     <div *ngIf="form.get('email')?.errors?.['email']">
                         Por favor, insira um email válido.
@@ -37,10 +39,12 @@
                         senha é obrigatório.
                     </div>
                     <div *ngIf="form.get('password')?.errors?.['minlength']">
-                        Senha não pode ter menos do que 8 caracteres
+                        Senha não pode ter menos do que {{ form.get('password')?.errors?.['minlength'].requiredLength }}
+                        caracteres.
                     </div>
                     <div *ngIf="form.get('password')?.errors?.['maxlength']">
-                        Senha não pode ter mais do que 100 caracteres
+                        Senha não pode ter mais do que {{ form.get('password')?.errors?.['maxlength'].requiredLength }}
+                        caracteres.
                     </div>
                 </div>
             </div>
