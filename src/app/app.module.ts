@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { UserModule } from './user/user.module';
     BrowserModule,
     AuthModule,
     UserModule,
+    DashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
