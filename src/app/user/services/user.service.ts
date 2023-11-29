@@ -24,6 +24,5 @@ export class UserService {
     console.log("formato da data: " + userSaveDto.birthDate.toISOString.toString);
 
     return UserDto;
-
   }
 }

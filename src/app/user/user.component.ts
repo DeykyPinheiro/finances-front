@@ -10,7 +10,7 @@ import { UserSaveDto } from './model/UserSaveDto';
 })
 export class UserComponent {
 
-  form: FormGroup;
+  private form: FormGroup;
 
   constructor(private userService: UserService, private formBuilder: FormBuilder) {
     this.form = formBuilder.group({

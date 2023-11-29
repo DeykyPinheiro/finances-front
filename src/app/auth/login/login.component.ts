@@ -9,7 +9,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class LoginComponent {
 
-  form: FormGroup;
+  private form: FormGroup;
 
   constructor(private authService: AuthService,
     private formBuilder: FormBuilder
