@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: "user", component: UserComponent },
   { path: "dashboard", component: DashboardComponent },
 
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, // rota padrao 
 ]
 
 
