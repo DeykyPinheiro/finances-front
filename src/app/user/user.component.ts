@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { UserService } from './services/user.service';
+import { UserSaveDto } from './model/UserSaveDto';
 
 @Component({
   selector: 'app-user',
@@ -10,7 +12,7 @@ export class UserComponent {
 
   form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private userService: UserService, private formBuilder: FormBuilder) {
     this.form = formBuilder.group({
       name: ["", [Validators.required, Validators.minLength(8), Validators.maxLength(120)]],
       email: ["", [Validators.required, Validators.minLength(7), Validators.maxLength(120), Validators.email]],
@@ -42,7 +44,17 @@ export class UserComponent {
   }
 
   onSubmit(): void {
-    // console.log("erros: " + this.form.errors);
+    // exemplo, depois vou mudar
+    if (this.form.valid) {
+
+      const userSaveDto: UserSaveDto = {
+        name: "teste",
+        password: "123456789",
+        email: " teste@test.com",
+        birthDate: new Date()
+      };
+      this.userService.save(userSaveDto);
+    }
   }
 
 
