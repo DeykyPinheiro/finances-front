@@ -36,8 +36,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - [] receber/ enviar arquivos por excel
 
 
-- [] montar a scrutura de projeto core/ feature 
+- [] montar a scrutura de projeto core/ feature/ shared
     https://www.youtube.com/watch?v=J4TOL0AYTvI&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=22&t=943s
+    user como ref https://angular.io/guide/styleguide
 - [] login/ token 
     https://www.youtube.com/watch?v=d9PapIit32w&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=32 
 - [] documentar 
