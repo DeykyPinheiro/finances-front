@@ -33,6 +33,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - [] incluir mascaras de dinheiro, nome, email
 - [] incluir pix
 - [] login com google
+- [] receber/ enviar arquivos por excel
 
 
 - [] montar a scrutura de projeto core/ feature 
