@@ -18,6 +18,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+Run `ng linte` to execute linte Linter (eslint)
+
+
+
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
@@ -48,13 +52,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     https://www.youtube.com/watch?v=aqoJJRT8Ycs&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=35
 - [] controlar rotas  
     https://www.youtube.com/watch?v=bVtenTbJjZg&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=34
-- [] linter 
+- [x] linter 
     https://www.youtube.com/watch?v=GS5M9111QXw&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=9
 - [] interceptar erros  
     https://www.youtube.com/watch?v=HR4LxB3lNj8&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=29&t=581s
 - [] observebles 
     https://www.youtube.com/watch?v=3n-WCiSxu2k&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=14&t=67s
-- [] pesquisa de gastos
+- [] funcao de pesquisa na listagem de gastos
     https://www.youtube.com/watch?v=IIeyoQ99V_Y&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=31
 - []? angular material?
 

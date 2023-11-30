@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { UserService } from './services/user.service';
-import { UserSaveDto } from './model/UserSaveDto';
+import { UserSaveDto } from './model/user-save-dto';
 
 @Component({
   selector: 'app-user',

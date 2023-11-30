@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { UserSaveDto } from '../model/UserSaveDto';
-import { UserDto } from '../model/UserDto';
+import { UserSaveDto } from '../model/user-save-dto';
+import { UserDto } from '../model/user-dto';
+
+
 
 @Injectable({
   providedIn: 'root'
