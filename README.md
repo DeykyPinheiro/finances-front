@@ -28,3 +28,28 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 [aplicacao em producao](https://finances-front.vercel.app)
+
+
+- [] incluir mascaras de dinheiro, nome, email
+- [] incluir pix
+
+
+- [] montar a scrutura de projeto core/ feature 
+    https://www.youtube.com/watch?v=J4TOL0AYTvI&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=22&t=943s
+- [] login/ token 
+    https://www.youtube.com/watch?v=d9PapIit32w&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=32 
+- [] documentar 
+    https://www.youtube.com/watch?v=aqoJJRT8Ycs&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=35
+- [] controlar rotas  
+    https://www.youtube.com/watch?v=bVtenTbJjZg&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=34
+- [] linter 
+    https://www.youtube.com/watch?v=GS5M9111QXw&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=9
+- [] interceptar erros  
+    https://www.youtube.com/watch?v=HR4LxB3lNj8&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=29&t=581s
+- [] observebles 
+    https://www.youtube.com/watch?v=3n-WCiSxu2k&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=14&t=67s
+- [] pesquisa de gastos
+    https://www.youtube.com/watch?v=IIeyoQ99V_Y&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=31
+- [] 
+- []? angular material?
+
