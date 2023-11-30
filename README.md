@@ -32,6 +32,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 - [] incluir mascaras de dinheiro, nome, email
 - [] incluir pix
+- [] login com google
 
 
 - [] montar a scrutura de projeto core/ feature 
@@ -50,6 +51,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     https://www.youtube.com/watch?v=3n-WCiSxu2k&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=14&t=67s
 - [] pesquisa de gastos
     https://www.youtube.com/watch?v=IIeyoQ99V_Y&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=31
-- [] 
 - []? angular material?
 
