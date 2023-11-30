@@ -7,9 +7,6 @@ import { UserDto } from '../model/UserDto';
 })
 export class UserService {
 
-  constructor() { }
-
-
 
   save(userSaveDto: UserSaveDto): UserDto {
     // exemplo
