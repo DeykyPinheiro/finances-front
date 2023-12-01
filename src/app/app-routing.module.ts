@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserComponent } from './user/user.component';
 import { LoginComponent } from './auth/login/login.component';
 
@@ -14,9 +13,8 @@ import { LoginComponent } from './auth/login/login.component';
 const routes: Routes = [
   { path: "auth", component: LoginComponent },
   { path: "user", component: UserComponent },
-  { path: "dashboard", component: DashboardComponent },
 
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, // rota padrao 
+  { path: '', redirectTo: '/resume', pathMatch: 'full' }, // rota padrao 
 ]
 
 
