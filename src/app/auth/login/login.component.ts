@@ -31,7 +31,7 @@ export class LoginComponent {
     if (this.form.valid) {
       this.authService.login(this.form.value).subscribe((token: TokenDto) => {
         // salvar o token
-        token.accessToken;
+        localStorage.setItem("accessToken", token.accessToken);
 
         this.router.navigate(["/"])
       })

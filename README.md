@@ -50,6 +50,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     -[x] interceptar
     -[] lancar msg
 - [] login/ token 
+  -[] validacao de token
     https://www.youtube.com/watch?v=d9PapIit32w&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=32 
 - [] documentar 
     https://www.youtube.com/watch?v=aqoJJRT8Ycs&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=35
