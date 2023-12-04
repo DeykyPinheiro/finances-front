@@ -1,0 +1,64 @@
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email" aria-describedby="emailHelp"
+            placeholder="Digite Seu Email">
+
+        <div *ngIf="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)"
+            class="alert alert-danger">
+            <div *ngIf="form.get('email')?.errors?.['required']">
+                Email é obrigatório.
+            </div>
+            <div *ngIf="form.get('email')?.errors?.['minlength']">
+                O email deve ter pelo menos {{ form.get('email')?.errors?.['minlength'].requiredLength }}
+                caracteres.
+            </div>
+            <div *ngIf="form.get('email')?.errors?.['maxlength']">
+                O email não pode ter mais de {{ form.get('email')?.errors?.['maxlength'].requiredLength }}
+                caracteres.
+            </div>
+            <div *ngIf="form.get('email')?.errors?.['email']">
+                Por favor, insira um email válido.
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" formControlName="password" id="password"
+            placeholder="Digite sua Senha">
+
+        <div *ngIf="form.get('password')?.invalid && (form.get('password')?.dirty || form.get('password')?.touched)"
+            class="alert alert-danger">
+
+            <div *ngIf="form.get('password')?.errors?.['required']">
+                senha é obrigatório.
+            </div>
+            <div *ngIf="form.get('password')?.errors?.['minlength']">
+                Senha não pode ter menos do que {{ form.get('password')?.errors?.['minlength'].requiredLength }}
+                caracteres.
+            </div>
+            <div *ngIf="form.get('password')?.errors?.['maxlength']">
+                Senha não pode ter mais do que {{ form.get('password')?.errors?.['maxlength'].requiredLength }}
+                caracteres.
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+
+    <div class="buttons">
+        <button type="reset" class="btn btn-primary">Limpar</button>
+        <!-- butao que só habilita quando tudo esta valido -->
+        <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Submit</button>
+        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+
+    </div>
+
+
+
+</form>

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UserComponent } from './user/user.component';
-import { LoginComponent } from './auth/login/login.component';
+
+// import { LoginComponent } from './auth/login/login.component';
 
 
 // usei para registrar as rotas
@@ -11,8 +11,8 @@ import { LoginComponent } from './auth/login/login.component';
 
 
 const routes: Routes = [
-  { path: "auth", component: LoginComponent },
-  { path: "user", component: UserComponent },
+  // { path: "auth", component: LoginComponent },
+  // { path: "user", component: UserComponent },
 
   { path: '', redirectTo: '/resume', pathMatch: 'full' }, // rota padrao 
 ]

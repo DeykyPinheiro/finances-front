@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserComponent } from './user.component';
 import { ReactiveFormsModule } from '@angular/forms'; // importar pros formularios funcionarem
+import { UserRoutingModule } from './user-routing.module';
 
 
 
@@ -11,7 +12,8 @@ import { ReactiveFormsModule } from '@angular/forms'; // importar pros formulari
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    UserRoutingModule
   ],
   exports: [
     UserComponent

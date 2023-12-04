@@ -1,6 +1,5 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpErrorInterceptor } from './interceptors/http-error.interceptor';
 
@@ -11,11 +10,11 @@ import { HttpErrorInterceptor } from './interceptors/http-error.interceptor';
 
 
 const MODULES = [CommonModule]
-const COMPONENTS = [ToolbarComponent]
+const COMPONENTS: any[] = []
 
 @NgModule({
   declarations: [
-    ToolbarComponent
+    COMPONENTS
   ],
   imports: [MODULES],
   exports: [COMPONENTS, MODULES],
