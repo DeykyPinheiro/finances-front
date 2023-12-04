@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
-import { UserService } from './services/user.service';
-import { UserSaveDto } from './model/user-save-dto';
+import { UserSaveDto } from '../../model/user-save-dto';
 import { matchValidator } from 'src/app/shared/validators/match.validator';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../../services/user.service';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
+  selector: 'app-user-create',
+  templateUrl: './user-create.component.html',
+  styleUrls: ['./user-create.component.scss']
 })
-export class UserComponent {
+export class UserCreateComponent {
 
   form: FormGroup;
 
@@ -66,4 +66,5 @@ export class UserComponent {
     console.log("this.form.errors: " + JSON.stringify(this.form.errors));
 
   }
+
 }

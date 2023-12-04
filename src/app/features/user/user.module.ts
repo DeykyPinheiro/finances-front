@@ -1,14 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UserComponent } from './user.component';
 import { ReactiveFormsModule } from '@angular/forms'; // importar pros formularios funcionarem
+
 import { UserRoutingModule } from './user-routing.module';
+import { UserCreateComponent } from './components/user-create/user-create.component';
+import { UserEditComponent } from './components/user-edit/user-edit.component';
+import { UserViewComponent } from './components/user-view/user-view.component';
+import { UserDeleteComponent } from './components/user-delete/user-delete.component';
 
 
 
 @NgModule({
   declarations: [
-    UserComponent
+    UserCreateComponent,
+    UserEditComponent,
+    UserViewComponent,
+    UserDeleteComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +23,7 @@ import { UserRoutingModule } from './user-routing.module';
     UserRoutingModule
   ],
   exports: [
-    UserComponent
+    // UserComponent
   ]
 })
 export class UserModule { }
