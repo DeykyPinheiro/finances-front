@@ -40,6 +40,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - [] receber/ enviar arquivos por excel
 
 
+
 - [x] montar a scrutura de projeto core/ feature/ shared 
         - [x] core
         - [x] feature
@@ -48,10 +49,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     texto ref princiapl  https://belmirofss.medium.com/minha-nova-estrutura-de-pastas-para-angular-escalável-limpa-e-fácil-93b6ffb203d9
     https://www.youtube.com/watch?v=J4TOL0AYTvI&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=22&t=943s
     user como ref https://angular.io/guide/styleguide
+    ref importanter https://www.youtube.com/watch?v=PsmODOaE_2o
 - [] tratamento de erros globais
     -[x] interceptar
-    -[] lancar msg
+    -[] lancar msg (notificacao/ alert)
+        - [] um alerta implementar pra confimar operaracao depois
 - [] login/ token 
+    -[] separa auth para o core / component de login para feature
     - [] concertar o submit do form
     -[] validacao de token
         https://www.youtube.com/watch?v=d9PapIit32w&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=32 
