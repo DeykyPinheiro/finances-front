@@ -40,12 +40,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - [] receber/ enviar arquivos por excel
 
 
-- [] montar a scrutura de projeto core/ feature/ shared 
+- [x] montar a scrutura de projeto core/ feature/ shared 
         - [x] core
         - [x] feature
-        - [] shared
-            -[] adicionar validacoes como global
-    texto ref princiapl  https://belmirofss.medium.com/minha-nova-estrutura-de-pastas-para-angular-escalável-limpa-e-fácil-93b6ffb203d9)
+        - [x] shared
+            -[x] adicionar validacoes como global
+    texto ref princiapl  https://belmirofss.medium.com/minha-nova-estrutura-de-pastas-para-angular-escalável-limpa-e-fácil-93b6ffb203d9
     https://www.youtube.com/watch?v=J4TOL0AYTvI&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=22&t=943s
     user como ref https://angular.io/guide/styleguide
 - [] tratamento de erros globais

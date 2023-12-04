@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { UserService } from './services/user.service';
 import { UserSaveDto } from './model/user-save-dto';
+import { matchValidator } from 'src/app/shared/validators/match.validator';
 
 @Component({
   selector: 'app-user',
@@ -23,28 +24,28 @@ export class UserComponent {
       confirmPassword: ["", [Validators.required, Validators.minLength(8), Validators.maxLength(120),]],
       birthDate: ["", [Validators.required]]
     }, {
-      validators: [this.match('password', 'confirmPassword')]
+      validators: [matchValidator('password', 'confirmPassword')]
     })
   }
 
   // serve para confirmar ver se as duas senhas são iguais
-  private match(controlName: string, checkControlName: string): ValidatorFn {
-    return (controls: AbstractControl) => {
-      const control = controls.get(controlName);
-      const checkControl = controls.get(checkControlName);
+  // private match(controlName: string, checkControlName: string): ValidatorFn {
+  //   return (controls: AbstractControl) => {
+  //     const control = controls.get(controlName);
+  //     const checkControl = controls.get(checkControlName);
 
-      if (checkControl?.errors && !checkControl.errors['matching']) {
-        return null;
-      }
+  //     if (checkControl?.errors && !checkControl.errors['matching']) {
+  //       return null;
+  //     }
 
-      if (control?.value !== checkControl?.value) {
-        controls.get(checkControlName)?.setErrors({ matching: true });
-        return { matching: true };
-      } else {
-        return null;
-      }
-    };
-  }
+  //     if (control?.value !== checkControl?.value) {
+  //       controls.get(checkControlName)?.setErrors({ matching: true });
+  //       return { matching: true };
+  //     } else {
+  //       return null;
+  //     }
+  //   };
+  // }
 
   onSubmit(): void {
     // exemplo, depois vou mudar
