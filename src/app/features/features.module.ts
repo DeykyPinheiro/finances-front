@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AuthModule } from './auth/auth.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { UserModule } from './user/user.module';
+import { HomeModule } from './home/home.module';
 
 
 
@@ -12,7 +13,8 @@ import { UserModule } from './user/user.module';
     CommonModule,
     AuthModule,
     DashboardModule,
-    UserModule
+    UserModule,
+    HomeModule
   ]
 })
 export class FeaturesModule { }
