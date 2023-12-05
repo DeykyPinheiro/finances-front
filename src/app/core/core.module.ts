@@ -2,6 +2,12 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpErrorInterceptor } from './interceptors/http-error.interceptor';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { TokenInterceptor } from './interceptors/token-interceptor/token-interceptor.interceptor';
+import { AuthModule } from './auth/auth.module';
+
+
 
 // importar aqui o que é comum a toda aplicacao
 // se estivesse construindo uma casa, aqui seriam importados agua e luz
@@ -9,13 +15,18 @@ import { HttpErrorInterceptor } from './interceptors/http-error.interceptor';
 // muito comum importar o header e o footer
 
 
-const MODULES = [CommonModule]
-const COMPONENTS: any[] = []
+const MODULES = [
+  CommonModule,
+  ReactiveFormsModule,
+  AuthModule
+]
+
+const COMPONENTS: any[] = [
+
+]
 
 @NgModule({
-  declarations: [
-    COMPONENTS
-  ],
+  declarations: [COMPONENTS],
   imports: [MODULES],
   exports: [COMPONENTS, MODULES],
   // providers sao servicos que vc vai usar, mesmo sem injetar direto na classe
@@ -25,7 +36,12 @@ const COMPONENTS: any[] = []
       provide: HTTP_INTERCEPTORS, // tipo do interceptor
       useClass: HttpErrorInterceptor, // qual classe vai fazer a interceptacao
       multi: true // diz que pode ter mais de um interceptor
-    }
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true,
+    },
   ]
 })
 export class CoreModule {

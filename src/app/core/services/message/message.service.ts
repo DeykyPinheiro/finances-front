@@ -6,10 +6,6 @@ import Swal from 'sweetalert2';
 })
 export class MessageService {
 
-  constructor() { }
-
-
-
   success(message: string): void {
     Swal.fire({
       icon: "success",

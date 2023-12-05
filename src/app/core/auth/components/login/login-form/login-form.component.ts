@@ -1,15 +1,21 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../services/auth.service';
-import { TokenDto } from '../models/token-dto';
 import { Router } from '@angular/router';
 
+
+import { AuthService } from '../../../services/auth.service';
+import { TokenDto } from '../../../models/token-dto';
+
+
+
+
+
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-login-form',
+  templateUrl: './login-form.component.html',
+  styleUrls: ['./login-form.component.scss']
 })
-export class LoginComponent {
+export class LoginFormComponent {
 
   form: FormGroup;
 
@@ -32,10 +38,9 @@ export class LoginComponent {
       this.authService.login(this.form.value).subscribe((token: TokenDto) => {
         // salvar o token
         localStorage.setItem("accessToken", token.accessToken);
-
         this.router.navigate(["/"])
       })
     }
   }
-}
 
+}

@@ -1,16 +1,14 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-// import { Router } from '@angular/router';
-
-import { environment } from 'src/app/environments/environment .dev';
 import { TokenDto } from '../models/token-dto';
-import { Credential } from '../models/credential';
+import { environment } from 'src/app/environments/environment .dev';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+
 
 
   private loggedIn = new BehaviorSubject<boolean>(false)
