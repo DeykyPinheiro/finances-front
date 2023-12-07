@@ -7,7 +7,7 @@ import {
   HttpErrorResponse
 } from '@angular/common/http';
 import { Observable, catchError, throwError } from 'rxjs';
-import { MessageService } from '../services/message/message.service';
+import { MessageService } from '../../services/message-service/message.service';
 
 
 @Injectable()

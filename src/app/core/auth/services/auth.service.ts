@@ -10,6 +10,8 @@ import { TokenDto } from '../models/token-dto';
 })
 export class AuthService {
 
+  private endpoint = 'auth';
+
 
 
   private loggedIn = new BehaviorSubject<boolean>(false)
@@ -24,8 +26,13 @@ export class AuthService {
 
 
   login(credentials: Credential): Observable<TokenDto> {
-    const url = environment.baseUrl + "/auth/login";
+    const url = `${environment.baseUrl}/${this.endpoint}/login`
     return this.http.post<TokenDto>(url, credentials);
+  }
+
+  getRSAPublicKey(): Observable<any> {
+    const url = `${environment.baseUrl}/${this.endpoint}/jwks`;
+    return this.http.get<any>(url);
   }
 
   logout(): void {
