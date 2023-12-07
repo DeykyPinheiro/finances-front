@@ -1,13 +1,11 @@
-import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { HttpErrorInterceptor } from './interceptors/http-error.interceptor';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { TokenInterceptor } from './interceptors/token-interceptor/token-interceptor.interceptor';
 import { AuthModule } from './auth/auth.module';
-
-
+import { HttpErrorInterceptor } from './interceptors/http-error.interceptor';
+import { TokenInterceptor } from './interceptors/token-interceptor/token-interceptor.interceptor';
 
 // importar aqui o que é comum a toda aplicacao
 // se estivesse construindo uma casa, aqui seriam importados agua e luz

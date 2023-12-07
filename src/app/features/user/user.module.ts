@@ -7,6 +7,7 @@ import { UserCreateComponent } from './components/user-create/user-create.compon
 import { UserEditComponent } from './components/user-edit/user-edit.component';
 import { UserViewComponent } from './components/user-view/user-view.component';
 import { UserDeleteComponent } from './components/user-delete/user-delete.component';
+import { UserEditFormComponent } from './components/user-edit/user-edit-form/user-edit-form.component';
 
 
 
@@ -15,15 +16,14 @@ import { UserDeleteComponent } from './components/user-delete/user-delete.compon
     UserCreateComponent,
     UserEditComponent,
     UserViewComponent,
-    UserDeleteComponent
+    UserDeleteComponent,
+    UserEditFormComponent,
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     UserRoutingModule
   ],
-  exports: [
-    // UserComponent
-  ]
+  exports: []
 })
 export class UserModule { }

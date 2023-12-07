@@ -3,6 +3,7 @@ import { UserSaveDto } from '../../model/user-save-dto';
 import { matchValidator } from 'src/app/shared/validators/match.validator';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../services/user.service';
+import { UserDto } from '../../model/user-dto';
 
 @Component({
   selector: 'app-user-create',
@@ -28,36 +29,20 @@ export class UserCreateComponent {
     })
   }
 
-  // serve para confirmar ver se as duas senhas são iguais
-  // private match(controlName: string, checkControlName: string): ValidatorFn {
-  //   return (controls: AbstractControl) => {
-  //     const control = controls.get(controlName);
-  //     const checkControl = controls.get(checkControlName);
-
-  //     if (checkControl?.errors && !checkControl.errors['matching']) {
-  //       return null;
-  //     }
-
-  //     if (control?.value !== checkControl?.value) {
-  //       controls.get(checkControlName)?.setErrors({ matching: true });
-  //       return { matching: true };
-  //     } else {
-  //       return null;
-  //     }
-  //   };
-  // }
-
   onSubmit(): void {
-    // exemplo, depois vou mudar
     if (this.form.valid) {
 
       const userSaveDto: UserSaveDto = {
-        name: "teste",
-        password: "123456789",
-        email: " teste@test.com",
-        birthDate: new Date()
+        name: this.form.value.name,
+        password: this.form.value.password,
+        email: this.form.value.email,
+        birthDate: this.form.value.birthDate
       };
-      this.userService.save(userSaveDto);
+
+      this.userService.save(userSaveDto).subscribe((useDto: UserDto) => {
+        // TODO remover
+        console.log(JSON.stringify(useDto));
+      })
     }
   }
 

@@ -1,1 +1,16 @@
-<p>user-view works!</p>
+<h1>view de usuario</h1>
+<p>aqui é para mostrar o usuario, mas vou listar pq quero testar endpoints</p>
+
+<!-- <div class="selection" *ngFor="let user of listUser" (click)="editUser(user.id)">
+    {{ user.id }} - {{ user.name }} - {{ user.email }} - {{ user.birthDate }}
+    <div class="excluir" (click)="deleteUser(user.id)">excluir</div>
+</div> -->
+
+<ul>
+    <li *ngFor="let user of listUser">
+        <div class="selection" (click)="editUser(user.id)">
+            {{ user.id }} - {{ user.name }} - {{ user.email }} - {{ user.birthDate }}
+            <span class="excluir" (click)="deleteUser(user.id)">excluir</span>
+        </div>
+    </li>
+</ul>

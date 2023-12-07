@@ -9,8 +9,8 @@ import { UserDeleteComponent } from './components/user-delete/user-delete.compon
 const routes = [
   { path: "user-view", component: UserViewComponent },
   { path: "user-create", component: UserCreateComponent },
-  { path: "user-edit", component: UserEditComponent },
-  { path: "user-delete", component: UserDeleteComponent }
+  { path: "user-edit/:userId", component: UserEditComponent },
+  { path: "user-delete/:userId", component: UserDeleteComponent }
 ]
 
 @NgModule({

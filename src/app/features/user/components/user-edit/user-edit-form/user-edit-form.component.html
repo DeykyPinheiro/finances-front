@@ -1,0 +1,71 @@
+<!-- não esquecer de colocar isso para vincular o formulario -->
+<h1>{{ userId }}</h1>
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Name</label>
+        <input type="text" class="form-control" id="name" formControlName="name" aria-describedby="emailHelp"
+            placeholder="Digite seu nome completo">
+
+        <div *ngIf="form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)"
+            class="alert alert-danger">
+
+            <div *ngIf="form.get('name')?.errors?.['required']">
+                Nome completo é obrigatório
+            </div>
+            <div *ngIf="form.get('name')?.errors?.['minlength']">
+                O nome deve ter pelo menos {{ form.get('name')?.errors?.['minlength'].requiredLength }} caracteres.
+            </div>
+            <div *ngIf="form.get('name')?.errors?.['maxlength']">
+                O nome não pode ter mais de {{ form.get('name')?.errors?.['maxlength'].requiredLength }} caracteres.
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email" aria-describedby="emailHelp"
+            placeholder="Digite Seu Email">
+
+        <div *ngIf="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)"
+            class="alert alert-danger">
+            <div *ngIf="form.get('email')?.errors?.['required']">
+                Email é obrigatório.
+            </div>
+            <div *ngIf="form.get('email')?.errors?.['minlength']">
+                O email deve ter pelo menos {{ form.get('email')?.errors?.['minlength'].requiredLength }}
+                caracteres.
+            </div>
+            <div *ngIf="form.get('email')?.errors?.['maxlength']">
+                O email não pode ter mais de {{ form.get('email')?.errors?.['maxlength'].requiredLength }}
+                caracteres.
+            </div>
+            <div *ngIf="form.get('email')?.errors?.['email']">
+                Por favor, insira um email válido.
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label for="birthDate">Data de nascimento: </label>
+        <input type="date" class="form-control" id="birthDate" formControlName="birthDate" placeholder="Password">
+
+        <div *ngIf="form.get('birthDate')?.invalid && (form.get('birthDate')?.dirty || form.get('birthDate')?.touched)"
+            class="alert alert-danger">
+            <div *ngIf="form.get('birthDate')?.errors?.['required']">
+                Data de Nascimento é obrigatório
+            </div>
+        </div>
+
+    </div>
+
+    <div class="buttons">
+        <button type="reset" class="btn btn-primary">Limpar</button>
+        <!-- butao que só habilita quando tudo esta valido -->
+        <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Submit</button>
+        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+
+    </div>
+
+
+</form>

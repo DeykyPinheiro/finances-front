@@ -30,6 +30,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+pendencias no projeto, bucas por -> TODO
+
 
 [aplicacao em producao](https://finances-front.vercel.app)
 
@@ -40,6 +42,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - [] receber/ enviar arquivos por excel
 
 
+- [] por todos os formularios separados do card/ pagina
 
 - [x] montar a scrutura de projeto core/ feature/ shared 
         - [x] core
@@ -55,9 +58,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     -[] lancar msg (notificacao/ alert)
         - [] um alerta implementar pra confimar operaracao depois
 - [] login/ token 
-    -[] separa auth para o core / component de login para feature
+    -[x] separa auth para o core / component de login para feature
     - [] concertar o submit do form
-    -[] validacao de token
+    - [] validacao de token
+    - [] controlhar rota
         https://www.youtube.com/watch?v=d9PapIit32w&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=32 
 - [] documentar 
     https://www.youtube.com/watch?v=aqoJJRT8Ycs&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=35

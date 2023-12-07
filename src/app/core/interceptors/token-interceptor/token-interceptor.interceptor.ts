@@ -1,10 +1,5 @@
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {
-  HttpRequest,
-  HttpHandler,
-  HttpEvent,
-  HttpInterceptor
-} from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable()
@@ -14,20 +9,24 @@ export class TokenInterceptor implements HttpInterceptor {
   // ng g interceptor token-interceptor
   // serve para incluir o o token em cara altorizacao
 
-  constructor() { }
-
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 
-    let accessToken: string = localStorage.getItem("accessToken") || '';
-    let tokenType: string = localStorage.getItem("tokenType") || '';
+    const tokenAccessToken: string = localStorage.getItem("tokenAccessToken") || '';
+    const tokenTokenType: string = localStorage.getItem("tokenTokenType") || '';
 
-    if (accessToken !== '' && tokenType !== '') {
+    if (tokenAccessToken !== '' && tokenTokenType !== '') {
+      // console.log('Token Access:', tokenAccessToken);
+      // console.log('Token Type:', tokenTokenType);
+
       request = request.clone({
         setHeaders: {
-          Authorization: tokenType + " " + accessToken,
+          Authorization: tokenTokenType + " " + tokenAccessToken,
         }
       });
     }
+
+    // console.log("cabelho atual: " + JSON.stringify(request.headers));
+
     return next.handle(request);
   }
 }

@@ -37,7 +37,9 @@ export class LoginFormComponent {
     if (this.form.valid) {
       this.authService.login(this.form.value).subscribe((token: TokenDto) => {
         // salvar o token
-        localStorage.setItem("accessToken", token.accessToken);
+        localStorage.setItem("tokenAccessToken", token.accessToken);
+        localStorage.setItem("tokenExpiresIn", token.expiresIn)
+        localStorage.setItem("tokenTokenType", token.tokenType)
         this.router.navigate(["/"])
       })
     }
