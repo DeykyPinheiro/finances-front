@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { UserService } from '../../services/user.service';
 import { UserListDto } from '../../model/user-list-dto';
-import { Page } from 'src/app/core/auth/models/page/page';
+import { Page } from 'src/app/shared/model/page/page';
 import { Router } from '@angular/router';
 
 @Component({
@@ -29,12 +29,8 @@ export class UserViewComponent implements OnInit {
     this.router.navigate([`user-edit/${userId}`])
   }
 
-
   deleteUser(userId: number) {
     this.router.navigate([`user-delete/${userId}`])
   }
-
-
-
 
 }

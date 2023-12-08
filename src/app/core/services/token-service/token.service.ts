@@ -1,16 +1,18 @@
 import { Injectable } from '@angular/core';
-const jwt = require('jsonwebtoken');
+import * as jwt_decode from 'jwt-decode';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class TokenService {
 
-  public validateToken(token: string, publicKey: string): boolean {
+  public validateToken(token: string): boolean {
     try {
-      const decodedToken: any = jwt.verify(token, publicKey);
+      // const decodedToken: any = jwt_decode.jwtDecode.(token, publicKey);
+      return jwt_decode.jwtDecode(token);
       // Adicione lógica de validação adicional aqui, se necessário
-      return true;
+      // return true;
     } catch (error) {
       console.error('Erro ao verificar o token:', error);
       return false;

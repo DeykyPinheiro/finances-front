@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/app/environments/environment.dev';
 
+import { Credential } from '../models/credential';
 import { TokenDto } from '../models/token-dto';
 
 @Injectable({
@@ -20,7 +21,6 @@ export class AuthService {
 
 
   constructor(
-    // private router: Router,
     private http: HttpClient
   ) { }
 
@@ -30,15 +30,8 @@ export class AuthService {
     return this.http.post<TokenDto>(url, credentials);
   }
 
-  getRSAPublicKey(): Observable<any> {
-    const url = `${environment.baseUrl}/${this.endpoint}/jwks`;
-    return this.http.get<any>(url);
-  }
-
-  logout(): void {
-    // limpa geral
-    localStorage.clear()
-    // remove só o item
-    // localStorage.removeItem()
-  }
+  // getRSAPublicKey(): Observable<any> {
+  //   const url = `${environment.baseUrl}/${this.endpoint}/jwks`;
+  //   return this.http.get<any>(url);
+  // }
 }

@@ -28,19 +28,26 @@ export class UserEditFormComponent implements OnInit {
 
   userId!: number;
 
+
   // userDto!: UserDto;
 
+
+
   ngOnInit(): void {
+
+
 
     this.route.params.subscribe(params => {
       this.userId = params['userId'];
     });
 
     this.userService.findById(this.userId).subscribe((userDto: UserDto) => {
+      let date = new Date(userDto.birthDate);
+
       this.form.patchValue({
         name: userDto.name,
         email: userDto.email,
-        birthDate: userDto.birthDate
+        birthDate: date.toISOString().split('T')[0],
       });
     })
 

@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Page } from 'src/app/core/auth/models/page/page';
 import { environment } from 'src/app/environments/environment.dev';
+import { Page } from 'src/app/shared/model/page/page';
 
 import { UserDto } from '../model/user-dto';
 import { UserListDto } from '../model/user-list-dto';
@@ -26,7 +26,7 @@ export class UserService {
     return this.http.post<UserDto>(url, userDto);
   }
 
-  list(pageNumber = 0, pageSize = 10, sort = 'id'): Observable<Page<UserListDto>> {
+  list(pageNumber = 0, pageSize = 10, sort = "id"): Observable<Page<UserListDto>> {
     const url = `${environment.baseUrl}/${this.endpoint}?page=${pageNumber}&size=${pageSize}&sort=${sort}`;
     return this.http.get<Page<UserListDto>>(url);
   }

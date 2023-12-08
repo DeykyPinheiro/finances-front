@@ -5,7 +5,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AuthModule } from './auth/auth.module';
 import { HttpErrorInterceptor } from './interceptors/http-error-interceptor/http-error.interceptor';
-import { PublicKeyInterceptor } from './interceptors/public-key-interceptor/public-key.interceptor';
 import { TokenInterceptor } from './interceptors/token-interceptor/token-interceptor.interceptor';
 
 // importar aqui o que é comum a toda aplicacao
@@ -40,11 +39,6 @@ const COMPONENTS: any[] = [
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
       multi: true,
-    },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: PublicKeyInterceptor,
-      multi: true
     }
   ]
 })

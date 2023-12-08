@@ -59,8 +59,8 @@ pendencias no projeto, bucas por -> TODO
         - [] um alerta implementar pra confimar operaracao depois
 - [] login/ token 
     -[x] separa auth para o core / component de login para feature
-    - [] concertar o submit do form
-    - [] validacao de token
+    - [x] concertar o submit do form
+    - [x] validacao de token
     - [] controlhar rota
         https://www.youtube.com/watch?v=d9PapIit32w&list=PLqsayW8DhUmvtNlkDqYj99X73ts9FLK7j&index=32 
 - [] documentar 

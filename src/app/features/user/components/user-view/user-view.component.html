@@ -9,7 +9,7 @@
 <ul>
     <li *ngFor="let user of listUser">
         <div class="selection" (click)="editUser(user.id)">
-            {{ user.id }} - {{ user.name }} - {{ user.email }} - {{ user.birthDate }}
+            {{ user.id }} - {{ user.name }} - {{ user.email }} - {{ user.birthDate | date: 'dd/MM/yyyy'}}
             <span class="excluir" (click)="deleteUser(user.id)">excluir</span>
         </div>
     </li>

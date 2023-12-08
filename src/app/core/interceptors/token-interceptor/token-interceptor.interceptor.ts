@@ -15,17 +15,12 @@ export class TokenInterceptor implements HttpInterceptor {
     const tokenTokenType: string = localStorage.getItem("tokenTokenType") || '';
 
     if (tokenAccessToken !== '' && tokenTokenType !== '') {
-      // console.log('Token Access:', tokenAccessToken);
-      // console.log('Token Type:', tokenTokenType);
-
       request = request.clone({
         setHeaders: {
           Authorization: tokenTokenType + " " + tokenAccessToken,
         }
       });
     }
-
-    // console.log("cabelho atual: " + JSON.stringify(request.headers));
 
     return next.handle(request);
   }
