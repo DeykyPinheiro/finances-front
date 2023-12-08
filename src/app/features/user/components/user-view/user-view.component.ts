@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
-import { UserService } from '../../services/user.service';
-import { UserListDto } from '../../model/user-list-dto';
-import { Page } from 'src/app/shared/model/page/page';
 import { Router } from '@angular/router';
+import { Page } from 'src/app/shared/model/page/page';
+
+import { UserListDto } from '../../model/user-list-dto';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-user-view',

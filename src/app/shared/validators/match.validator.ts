@@ -5,7 +5,6 @@ export const matchValidator = (controlName: string, checkControlName: string): V
         const control = controls.get(controlName);
         const checkControl = controls.get(checkControlName);
 
-
         // possui erros e os erros nao sao do tipo matching
         if (checkControl?.errors && !checkControl.errors['matching']) {
             return null;

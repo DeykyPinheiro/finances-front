@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ResumeDashboardComponent } from './resume-dashboard/resume-dashboard.component';
-import { DashboardRoutingModule } from './dashboard-routing.module';
+import { NgModule } from '@angular/core';
 
+import { DashboardRoutingModule } from './dashboard-routing.module';
+import { ResumeDashboardComponent } from './resume-dashboard/resume-dashboard.component';
 
 @NgModule({
   declarations: [

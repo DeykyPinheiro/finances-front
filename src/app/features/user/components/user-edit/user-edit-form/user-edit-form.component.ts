@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UserService } from '../../../services/user.service';
-import { UserUpdateDto } from '../../../model/user-update-dto';
-import { UserDto } from '../../../model/user-dto';
 import { ActivatedRoute } from '@angular/router';
+
+import { UserDto } from '../../../model/user-dto';
+import { UserUpdateDto } from '../../../model/user-update-dto';
+import { UserService } from '../../../services/user.service';
 
 @Component({
   selector: 'app-user-edit-form',
@@ -28,14 +29,9 @@ export class UserEditFormComponent implements OnInit {
 
   userId!: number;
 
-
   // userDto!: UserDto;
 
-
-
   ngOnInit(): void {
-
-
 
     this.route.params.subscribe(params => {
       this.userId = params['userId'];
@@ -50,10 +46,7 @@ export class UserEditFormComponent implements OnInit {
         birthDate: date.toISOString().split('T')[0],
       });
     })
-
   }
-
-
 
   onSubmit(): void {
     if (this.form.valid) {
@@ -70,5 +63,4 @@ export class UserEditFormComponent implements OnInit {
       })
     }
   }
-
 }

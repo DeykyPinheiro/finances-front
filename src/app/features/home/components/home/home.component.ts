@@ -24,9 +24,4 @@ export class HomeComponent {
     this.messageService.warning("123456")
   }
 
-  // TODO  implementar pra confimar operaracao depois
-
-
-
-
 }
